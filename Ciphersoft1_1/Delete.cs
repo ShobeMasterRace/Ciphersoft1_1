@@ -37,43 +37,40 @@ namespace Ciphersoft1_1
                     Console.WriteLine("Y / N");
 
 
-                    //if (booz.KeyChar == 'y')
-                    //{
-                    //    List<string> delet = File.ReadAllLines(@"C:\Users\Public\WriteLines.txt").ToList();
-                    //    if (delet.Count == 0)
-                    //    {
-                    //        throw new Exception("Data Empty!");
-                    //    }
+                    if (booz.KeyChar == 'y')
+                    {
+                        List<string> delet = File.ReadAllLines(@"C:\Users\Public\WriteLines.txt").ToList();
+                        if (delet.Count == 0)
+                        {
+                            throw new Exception("Data Empty!");
+                        }
 
-                    //    else
-                    //    {
-                    //        string firstItem = delet[0];
-                    //        delet.RemoveAt(0);
-                    //        delet.RemoveAt(1);
-                    //        delet.RemoveAt(2);
-                    //        delet.RemoveAt(3);
-
-
-                    //    }
+                        else
+                        {
+                            string firstItem = delet[0];
+                            delet.RemoveAt(0);
+                            delet.RemoveAt(1);
+                            delet.RemoveAt(2);
+                            delet.RemoveAt(3);
 
 
+                        }
+
+                        
 
 
-                    //    break;
+                        break;
 
-                    //}
+                    }
 
-                    //break;
+                    break;
 
 
 
                 }
 
             }
-            //Console.WriteLine(inputs[0]);
-            //Console.WriteLine(inputs[1]);
-            //Console.WriteLine(inputs[2]);
-            //Console.WriteLine(inputs[3]);
+            
 
 
         }
