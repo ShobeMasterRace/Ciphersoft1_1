@@ -22,9 +22,10 @@ namespace Ciphersoft1_1
             string adresa;
             string oib;
 
+            Console.WriteLine("Ciphersoft1_1");
+            Console.WriteLine("_______________");
 
-
-            Console.WriteLine("Upišite Ime: ");
+            Console.WriteLine("\nUpišite Ime: ");
             ime = Console.ReadLine();
 
             Console.WriteLine("Upišite Prezime: ");
@@ -40,7 +41,7 @@ namespace Ciphersoft1_1
 
 
 
-            System.IO.File.WriteAllLines(@"C:\Users\Public\WriteLines.txt", list);
+            System.IO.File.AppendAllLines(@"C:\Users\Public\WriteLines.txt", list);
 
 
 

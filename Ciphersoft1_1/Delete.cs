@@ -20,7 +20,6 @@ namespace Ciphersoft1_1
             string path = @"C:\Users\Public\WriteLines.txt";
             string[] inputs;
             var booz = Console.ReadKey();
-            string bris;
 
             inputs = File.ReadAllLines(path);
 
@@ -42,7 +41,9 @@ namespace Ciphersoft1_1
                         List<string> delet = File.ReadAllLines(@"C:\Users\Public\WriteLines.txt").ToList();
                         if (delet.Count == 0)
                         {
-                            throw new Exception("Data Empty!");
+
+                            Console.WriteLine("Nema unosa!");
+
                         }
 
                         else
