@@ -39,11 +39,29 @@ namespace Ciphersoft1_1
 
             string[] list = { ime, prezime, adresa, oib };
 
+            Console.WriteLine("\nPonovo? Y/N");
+
+            
 
 
             System.IO.File.AppendAllLines(@"C:\Users\Public\WriteLines.txt", list);
 
+            if (Console.ReadLine().ToLower() == "y")
+            {
+                Adding();
 
+
+
+            }
+
+            else if (Console.ReadLine().ToLower() == "n")
+            {
+                Environment.Exit(0);
+
+
+
+
+            }
 
         }
 

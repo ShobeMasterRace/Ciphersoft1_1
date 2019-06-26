@@ -10,24 +10,23 @@ namespace Ciphersoft1_1
     {
         public Test()
         {
-
+            //NAPRAVITI TAKO DA DELETE CLASS-a ČEKA BAREM 3 ENTRY-A IZ ADD KLASE
+            
 
 
 
         }
 
 
-        public void testing()
+        public string testing()
         {
 
-            string path = @"C:\Users\Public\WriteLines.txt";
-            string[] inputs;
-
-            inputs = File.ReadAllLines(path);
-            Console.WriteLine("{0}\n{1}\n{2}\n{3} ", inputs);
-
-            Console.WriteLine(inputs);
-
+            List<string> delet = File.ReadAllLines(@"C:\Users\Public\WriteLines.txt").ToList();
+            string blab = delet[0];
+            delet.RemoveAt(0);
+  
+            File.WriteAllLines(@"C:\Users\Public\WriteLines.txt", delet.ToArray());
+            return blab;
         }
 
 

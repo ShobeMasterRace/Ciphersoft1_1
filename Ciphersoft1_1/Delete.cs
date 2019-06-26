@@ -19,7 +19,6 @@ namespace Ciphersoft1_1
         {
             string path = @"C:\Users\Public\WriteLines.txt";
             string[] inputs;
-            var booz = Console.ReadKey();
 
             inputs = File.ReadAllLines(path);
 
@@ -36,43 +35,30 @@ namespace Ciphersoft1_1
                     Console.WriteLine("Y / N");
 
 
-                    if (booz.KeyChar == 'y')
+                    if (Console.ReadLine().ToLower() == "y")
                     {
                         List<string> delet = File.ReadAllLines(@"C:\Users\Public\WriteLines.txt").ToList();
-                        if (delet.Count == 0)
-                        {
+                        delet.RemoveAt(0);
+                        delet.RemoveAt(1);
+                        delet.RemoveAt(2);
+                        delet.RemoveAt(3);
 
-                            Console.WriteLine("Nema unosa!");
-
-                        }
-
-                        else
-                        {
-                            string firstItem = delet[0];
-                            delet.RemoveAt(0);
-                            delet.RemoveAt(1);
-                            delet.RemoveAt(2);
-                            delet.RemoveAt(3);
-
-
-                        }
-
-                        
 
 
                         break;
 
+
                     }
 
-                    break;
+                    
 
 
 
                 }
 
             }
-            
 
+            Console.ReadLine();
 
         }
     }
