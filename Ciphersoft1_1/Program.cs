@@ -15,8 +15,13 @@ namespace Ciphersoft1_1
             //Delete brisanje = new Delete();
             //brisanje.Deleting();
 
-            //Test bla = new Test();
-            //bla.testing();
+            //Edit editanje = new Edit();
+            //editanje.Editing();
+
+            //Find nadi = new Find();
+            //nadi.finding();
+
+          
 
         }
     }
