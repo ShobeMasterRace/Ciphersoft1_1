@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 
 namespace Ciphersoft1_1
 {
@@ -6,8 +7,9 @@ namespace Ciphersoft1_1
     {
         static void Main(string[] args)
         {
-            //Add dodavanje = new Add();
-            //dodavanje.Adding();
+            Add dodavanje = new Add();
+            dodavanje.Adding();
+
 
             //ShowAll pokaz = new ShowAll();
             //pokaz.ShowsAll();
@@ -21,7 +23,7 @@ namespace Ciphersoft1_1
             //Find nadi = new Find();
             //nadi.finding();
 
-          
+
 
         }
     }
