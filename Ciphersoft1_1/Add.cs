@@ -14,17 +14,30 @@ namespace Ciphersoft1_1
         public Add()
         {
 
+
+
+
+
+
         }
 
 
         public void Adding()
         {
             Users users = new Users { Ime = Console.ReadLine(), Prezime = Console.ReadLine(), Adresa = Console.ReadLine(), Oib = Console.ReadLine() };
-            string spremi = JsonConvert.SerializeObject(users.ToString());
+            
+            ShowAll.Users.Add(users);
+
+            string spremi = JsonConvert.SerializeObject(users);
             Console.WriteLine(spremi);
 
-            StreamWriter file = File.CreateText(@"C:\Users\Public\WriteLines2.txt");
-       
+
+            using (StreamWriter file = File.CreateText(@"C:\Users\Public\WriteLines2.txt"))
+            {
+                file.Write(spremi);
+            }
+            
+
 
 
 
