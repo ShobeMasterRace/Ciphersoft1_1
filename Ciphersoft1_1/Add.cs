@@ -32,10 +32,11 @@ namespace Ciphersoft1_1
             string spremi = JsonConvert.SerializeObject(users); //serrialize-a objekt (Ime, Prezime, Adresa, Oib) u JSON
             Console.WriteLine("\nOvaj User je spremljen" + " " + spremi);
 
-            Lista test = new Lista();
-            List<string> Lista2 = test.Alist;
-            Lista2.Add(spremi);
-            
+            Lista.DataList.Add(users.Ime);
+            Lista.DataList.Add(users.Prezime);
+            Lista.DataList.Add(users.Adresa);
+            Lista.DataList.Add(users.Oib);
+
 
 
 

@@ -19,10 +19,8 @@ namespace Ciphersoft1_1
 
         public void ShowsAll()
         {
-            Lista test = new Lista();
-            List<string> Lista2 = test.Alist;
-
-            Console.Write("Total elements: {0}", Lista2.Count);
+           
+            Console.Write("Total elements: {0}", Lista.DataList.Count);
 
         }
 
