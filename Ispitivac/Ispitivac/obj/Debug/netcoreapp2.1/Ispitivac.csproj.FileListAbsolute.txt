@@ -1,0 +1,11 @@
+C:\Users\Danil\source\repos\Ispitivac\Ispitivac\bin\Debug\netcoreapp2.1\Ispitivac.deps.json
+C:\Users\Danil\source\repos\Ispitivac\Ispitivac\bin\Debug\netcoreapp2.1\Ispitivac.runtimeconfig.json
+C:\Users\Danil\source\repos\Ispitivac\Ispitivac\bin\Debug\netcoreapp2.1\Ispitivac.runtimeconfig.dev.json
+C:\Users\Danil\source\repos\Ispitivac\Ispitivac\bin\Debug\netcoreapp2.1\Ispitivac.dll
+C:\Users\Danil\source\repos\Ispitivac\Ispitivac\bin\Debug\netcoreapp2.1\Ispitivac.pdb
+C:\Users\Danil\source\repos\Ispitivac\Ispitivac\obj\Debug\netcoreapp2.1\Ispitivac.csprojAssemblyReference.cache
+C:\Users\Danil\source\repos\Ispitivac\Ispitivac\obj\Debug\netcoreapp2.1\Ispitivac.csproj.CoreCompileInputs.cache
+C:\Users\Danil\source\repos\Ispitivac\Ispitivac\obj\Debug\netcoreapp2.1\Ispitivac.AssemblyInfoInputs.cache
+C:\Users\Danil\source\repos\Ispitivac\Ispitivac\obj\Debug\netcoreapp2.1\Ispitivac.AssemblyInfo.cs
+C:\Users\Danil\source\repos\Ispitivac\Ispitivac\obj\Debug\netcoreapp2.1\Ispitivac.dll
+C:\Users\Danil\source\repos\Ispitivac\Ispitivac\obj\Debug\netcoreapp2.1\Ispitivac.pdb
