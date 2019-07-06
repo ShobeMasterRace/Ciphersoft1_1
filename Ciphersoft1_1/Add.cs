@@ -7,7 +7,7 @@ using System.IO;
 
 namespace Ciphersoft1_1
 {
-    public class Add
+    public class Add  : LoadSave
     {
 
 
@@ -24,44 +24,17 @@ namespace Ciphersoft1_1
 
         public void Adding()
         {
+            Load();
 
             Users users = new Users { Ime = Console.ReadLine(), Prezime = Console.ReadLine(), Adresa = Console.ReadLine(), Oib = Console.ReadLine() };
+             
+            Console.WriteLine("\nOvaj User je spremljen" + " " + users.Ime);
 
-
-
-            string spremi = JsonConvert.SerializeObject(users); //serrialize-a objekt (Ime, Prezime, Adresa, Oib) u JSON
-            Console.WriteLine("\nOvaj User je spremljen" + " " + spremi);
-
-            Lista.DataList.Add(users.Ime);
-            Lista.DataList.Add(users.Prezime);
-            Lista.DataList.Add(users.Adresa);
-            Lista.DataList.Add(users.Oib);
-
-
-
-
-            using (StreamWriter file = new StreamWriter(@"C:\Users\Public\WriteLines2.txt", true)) //Sad se lista append-a u text file-u, (tocnije to radi value 'true')
-            {
-                file.Write(spremi + "\n");
-
-            }
-
+            DataList.Add(users);
+            Save();
             
 
-
-            Console.WriteLine("\nPonovo? Y/N");
-
-            if (Console.ReadLine().ToLower() == "y")
-            {
-                Adding();
-
-            }
-
-            else if (Console.ReadLine().ToLower() == "n")
-            {
-                Environment.Exit(0);
-
-            }
+  
 
 
         }

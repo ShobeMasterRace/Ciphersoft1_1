@@ -3,50 +3,91 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Diagnostics;
+using System.Linq;
 
 namespace Ciphersoft1_1
 {
-    public class Edit
+    public class Edit : LoadSave
     {
         public Edit()
         {
 
+            Load();
 
         }
 
 
+
         public void Editing()
         {
+            Console.WriteLine("Upiši Oib User-a: ");
+            string nadi = Console.ReadLine(); //nadi user-a
 
-            //Stavljeno da se može poogledat svaki line i lakše odabere koji se želi promjenit
-            //Process.Start(@"notepad.exe", @"C:\Users\Public\WriteLines2.txt");
+
+            Users userZaEdit = DataList.FirstOrDefault(a => a.Oib == nadi);
+
+            if (userZaEdit != null)
+            {
+                Console.WriteLine("User pronađen: " + userZaEdit.ToString());
+                Console.WriteLine("Upiši koji dio želiš promjeniti: ");
+
+                string imeVarijable = Console.ReadLine();
+
+                Console.WriteLine("Koju vrijednost želiš staviti? ");
+                string vrijednostVarijable = Console.ReadLine();
+
+                switch (imeVarijable)
+                {
+                    case "Ime":
+                        userZaEdit.Ime = vrijednostVarijable;
+                        break;
+                    case "Prezime":
+                        userZaEdit.Prezime = vrijednostVarijable;
+                        break;
+                    case "Adresa":
+                        userZaEdit.Adresa = vrijednostVarijable;
+                        break;
+                    default:
+                        break;
+
+                }
+
+                Save();
+
+
+                //if(imeVarijable == "Ime")
+                //{
+                //    userZaEdit.Ime = vrijednostVarijable;
+                //}
+                //else if(imeVarijable == "Prezime")
+                //{
+                //    userZaEdit.Prezime = vrijednostVarijable;
+                //}
+                //else if(imeVarijable == "Adresa")
+                //{
+                //    userZaEdit.Adresa = vrijednostVarijable;
+                //}
+                // Isto kao switch 
+
+
+            }
+
+
+
+
             
-            string text = File.ReadAllText(@"C:\Users\Public\WriteLines2.txt");
-            Console.WriteLine(text);
+            //for(int i = 0; i < DataList.Count; i++)
+            //{
+            //    if(DataList[i].Oib == nadi)
+            //    {
+            //        // aafda
 
-            Console.WriteLine("Upišite koju stavku želite editat: ");
-            string find = Console.ReadLine();
 
-            Console.WriteLine("Upišite promjenu: ");
-            string proba = Console.ReadLine();
+            //        break;
+            //    }
+            //}
+            //   Isto šta i FirstOrDefault
 
-            text = text.Replace(find, proba);
-
-            File.WriteAllText(@"C:\Users\Public\WriteLines2.txt", text);
-
-            Console.WriteLine("\nJoš neka izmjena? Y/N");
-
-            if (Console.ReadLine().ToLower() == "y")
-            {
-                Editing();
-
-            }
-
-            else if (Console.ReadLine().ToLower() == "n")
-            {
-                Environment.Exit(0);
-
-            }
 
 
         }

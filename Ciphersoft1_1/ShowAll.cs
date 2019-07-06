@@ -20,7 +20,7 @@ namespace Ciphersoft1_1
         public void ShowsAll()
         {
            
-            Console.Write("Total elements: {0}", Lista.DataList.Count);
+            //Console.Write("Total elements: {0}", Lista.DataList.Count);
 
         }
 
